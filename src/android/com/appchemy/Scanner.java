@@ -51,6 +51,8 @@ public class Scanner extends CordovaPlugin {
             triggerCallback = callbackContext;
             return true;
         } else if (action.equals("close")) {
+            Toast.makeText(cordova.getActivity(),"Stopping",Toast.LENGTH_SHORT).show();
+            this.close(callbackContext);
             return true;
         }
         return false;
